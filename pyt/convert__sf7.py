@@ -104,7 +104,7 @@ def convert__sf7():
     pData[:,yp_]   = 0.0
     pData[:,zp_]   = wData[:,0]
     pData[:,bx_]   = 0.0
-    pData[:,by_]   = wData[:,6]
+    pData[:,by_]   = wData[:,6] * const["mu0"]
     pData[:,bz_]   = 0.0
 
     index          = np.lexsort( ( pData[:,xp_], pData[:,yp_], pData[:,zp_]) )
